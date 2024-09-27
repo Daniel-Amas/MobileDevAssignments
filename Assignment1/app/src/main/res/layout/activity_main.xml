@@ -7,13 +7,111 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tbInfo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#FCF5FD"
+        android:minHeight="?attr/actionBarSize"
+        android:padding="48dp"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:text="Mortgage Payment Calculator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@+id/tbInfo"
+        app:layout_constraintEnd_toEndOf="@+id/tbInfo"
+        app:layout_constraintStart_toStartOf="@+id/tbInfo"
+        app:layout_constraintTop_toTopOf="@+id/tbInfo" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Calculate EMI"
+        app:layout_constraintEnd_toEndOf="@+id/tvEMIResult"
+        app:layout_constraintStart_toStartOf="@+id/tvEMIResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvEMIResult" />
+
+    <EditText
+        android:id="@+id/etInterestRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:hint="Enter Interest Rate"
+        android:inputType="numberDecimal"
+        android:minEms="5"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/etMortgageAmount"
+        app:layout_constraintStart_toStartOf="@+id/etMortgageAmount"
+        app:layout_constraintTop_toBottomOf="@+id/etMortgageAmount" />
+
+    <EditText
+        android:id="@+id/etMortgageAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:hint="Enter Mortgage Amount"
+        android:inputType="numberDecimal"
+        android:minEms="5"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etTenure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:hint="Enter Tenure (in years)"
+        android:inputType="number"
+        android:minEms="5"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/etInterestRate"
+        app:layout_constraintStart_toStartOf="@+id/etInterestRate"
+        app:layout_constraintTop_toBottomOf="@+id/etInterestRate" />
+
+    <TextView
+        android:id="@+id/tvEMIResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:paddingTop="16dp"
+        android:text="Your EMI will be shown here"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/etTenure"
+        app:layout_constraintStart_toStartOf="@+id/etTenure"
+        app:layout_constraintTop_toBottomOf="@+id/etTenure" />
+
+    <TextView
+        android:id="@+id/tvMoreInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="58dp"
+        android:fontFamily="sans-serif-light"
+        android:text="How to use"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#1976D2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnCalculate"
+        app:layout_constraintStart_toStartOf="@+id/btnCalculate" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

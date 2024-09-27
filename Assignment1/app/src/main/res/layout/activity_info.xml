@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tbInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FCF5FD"
+        android:minHeight="?attr/actionBarSize"
+        android:padding="48dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:text="How To Use"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@+id/tbInfo"
+        app:layout_constraintEnd_toEndOf="@+id/tbInfo"
+        app:layout_constraintStart_toStartOf="@+id/tbInfo"
+        app:layout_constraintTop_toTopOf="@+id/tbInfo" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnCloseInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        app:backgroundTint="#FCF5FD"
+        app:layout_constraintBottom_toBottomOf="@+id/tbInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toEndOf="@+id/tvInfoTitle"
+        app:layout_constraintTop_toTopOf="@+id/tbInfo"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <TextView
+        android:id="@+id/tvEmiValueTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your EMI is"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#B90D0D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
