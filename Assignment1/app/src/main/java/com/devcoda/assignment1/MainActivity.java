@@ -1,5 +1,7 @@
 package com.devcoda.assignment1;
 
+import static com.devcoda.assignment1.R.*;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     EditText etMortgageAmount, etTenure, etInterestRate;
     Button btnCalculate;
-    TextView tvEMIResult, tvMoreInfo, tvEmiValueTest;
+    TextView tvEMIResult, tvMoreInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         btnCalculate = findViewById(R.id.btnCalculate);
         tvEMIResult = findViewById(R.id.tvEMIResult);
         tvMoreInfo = findViewById(R.id.tvMoreInfo);
-        tvEmiValueTest = findViewById(R.id.tvEmiValueTest);
 
         //Call the calculate function on click of btnCalculate
         btnCalculate.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Display the result
         tvEMIResult.setText(String.format("Your EMI is: %.2f", emi));
-        tvEmiValueTest.setText(String.format("Your EMI is: %.2f", emi));
     }
 
     //TODO: Read lecture slides to learn the proper naming conventions
