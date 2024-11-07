@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         tvMoreInfo.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view){
-                calculateEMI();
                 Intent intent = new Intent(MainActivity.this, InfoActivity.class);
                 startActivity(intent);
             }
